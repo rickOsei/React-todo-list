@@ -7,8 +7,6 @@ const TodoList = () => {
 
   // states for adding classes
   const [isActive, setIsActive] = useState(false);
-  const [isCompleted, setIsCompleted] = useState(false);
-  const [isDeleted, setIsDeleted] = useState(false);
 
   let addButton = document.querySelector(".btn_add");
   let taskTitle = document.querySelector(".task_name");
@@ -39,26 +37,6 @@ const TodoList = () => {
     setIsActive(true);
   }
 
-  function deleteItem(id) {
-    // let newArray = task.filter((item) => item.id !== id);
-    // setTask(newArray);
-    // // if (e.target.classNameList.contains("fa-trash-can")) {
-    // if (taskTitle.classNameList.contains("completed")) {
-    //   mainTask.classNameList.add("move");
-    // } else {
-    //   mainTask.classNameList.add("moving");
-    // }
-    // setTimeout(() => {
-    //   mainTask.remove();
-    // }, 1000);
-    // // }
-    // setIsDeleted((current) => !current);
-  }
-
-  function completedItem() {
-    setIsCompleted((current) => !current);
-  }
-
   return (
     <>
       <div className="main">
@@ -80,13 +58,7 @@ const TodoList = () => {
             </button>
           </div>
 
-          <Itemlist
-            task={task}
-            isCompleted={isCompleted}
-            isDeleted={isDeleted}
-            completedItem={completedItem}
-            deleteItem={deleteItem}
-          />
+          <Itemlist task={task} />
         </div>
       </div>
     </>

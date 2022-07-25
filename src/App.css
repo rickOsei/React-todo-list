@@ -129,6 +129,7 @@ i {
 
   100% {
     right: 200%;
+    display: none;
   }
 }
 
@@ -148,5 +149,6 @@ i {
 
   100% {
     left: 200%;
+    display: none;
   }
 }
